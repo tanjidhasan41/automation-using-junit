@@ -80,7 +80,7 @@ Test Data:
 - For the web forms:
   - Check the assertion logs for success or failure messages.
 - For the table scraping:
-  - Verify the console output and the generated text file (e.g., DSEBDData.txt).
+  - Verify the console output and the generated text file (e.g., store.txt).
 
 **Output Files**
 - Logs: Test results and execution details are logged in the console.
