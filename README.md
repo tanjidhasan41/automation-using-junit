@@ -15,7 +15,7 @@ To execute these automated scripts, ensure the following setup:
 
 **Development Environment:**
 - Java Development Kit (JDK) 8 or above.
-- IntelliJ IDEA or Eclipse IDE configured with Java.
+- IntelliJ IDEA or Eclipse IDE configured with Java..
 
 **Libraries/Dependencies:**
 - Selenium WebDriver.
