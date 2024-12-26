@@ -40,9 +40,9 @@ public class Task03ScrapTableData {
         for (WebElement row : allRows) {
             List<WebElement> cells = row.findElements(By.tagName("td"));
             for (WebElement cell : cells) {
-                String data =cell.getText();
+                String data = cell.getText();
                 System.out.print(data);
-                writer.write(" "+data+" ");
+                writer.write(" " + data + " ");
             }
             System.out.println();
             writer.write("\n");

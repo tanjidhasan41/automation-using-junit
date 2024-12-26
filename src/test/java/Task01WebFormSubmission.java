@@ -1,3 +1,4 @@
+import com.github.javafaker.Faker;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -34,18 +35,25 @@ public class Task01WebFormSubmission {
     @DisplayName("Check if form is submitting properly")
     public void submitForm() throws InterruptedException {
 
+        Faker faker = new Faker();
+
+        String name = faker.name().firstName();
+        String number = "0170" + Utils.randomPhoneNumber(1000000, 9999999);
+        String email = name.toLowerCase()+"@gmail.com";
+
         driver.get("https://www.digitalunite.com/practice-webform-learners");
 
         WebElement btnElement = driver.findElement(By.id("onetrust-accept-btn-handler"));
         Actions actions = new Actions(driver);
         actions.click(btnElement).perform();
         Thread.sleep(1000);
+        Utils.scroll(driver, 500);
 
         List<WebElement> formElements = driver.findElements(By.className("form-control"));
-        formElements.get(0).sendKeys("Tanjid");
-        formElements.get(1).sendKeys("25345678019");
+        formElements.get(0).sendKeys(name);
+        formElements.get(1).sendKeys(number);
         formElements.get(2).sendKeys("12/22/2024");
-        formElements.get(3).sendKeys("tanjid44@test.com");
+        formElements.get(3).sendKeys(email);
         formElements.get(4).sendKeys("My name is Tanjid");
 
         WebElement uploadImage = driver.findElement(By.id("edit-uploadocument-upload"));
