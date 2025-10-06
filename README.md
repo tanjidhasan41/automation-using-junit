@@ -15,7 +15,7 @@ To execute these automated scripts, ensure the following setup:
 
 **Development Environment:**
 - Java Development Kit (JDK) 8 or above.
-- IntelliJ IDEA or Eclipse IDE configured with Java..
+- IntelliJ IDEA or Eclipse IDE configured with Java.
 
 **Libraries/Dependencies:**
 - Selenium WebDriver.
@@ -27,6 +27,20 @@ To execute these automated scripts, ensure the following setup:
 Test Data:
 - A valid file for upload (≤ 2 MB).
 - Sample registration data for the guest form.
+
+# How to Run the Tests
+**Setup and Configuration**
+- Install JDK and set up your IDE (Eclipse/IntelliJ IDEA).
+- Add Selenium and JUnit libraries to your project build path.
+- Ensure the browser driver (e.g., ChromeDriver) is installed.
+**Running the Tests**
+- Clone or download the project files to your local machine.
+  - ```git clone <repository-url>```
+- Open the respective Java test class for the automation task:
+  - ```Task01WebFormSubmission.java```
+  - ```Task02UserRegistration.java```
+  - ```Task03ScrapTableData.java```
+- Run the test classes from the IDE.
 
 # What I Have Done
 ## Webform Automation for Digital Unite
@@ -61,27 +75,3 @@ Test Data:
 
 ![image](https://github.com/user-attachments/assets/538b9b85-d773-4c3c-ac41-4a78d68fdb69)
 
-
-# How to Run the Tests
-**Setup and Configuration**
-- Install JDK and set up your IDE (Eclipse/IntelliJ IDEA).
-- Add Selenium and JUnit libraries to your project build path.
-- Ensure the browser driver (e.g., ChromeDriver) is installed and set in your PATH.
-
-**Running the Tests**
-- Clone or download the project files to your local machine.
-- Open the respective Java test class for the automation task:
-  - ```Task01WebFormSubmission.java```
-  - ```Task02UserRegistration.java```
-  - ```Task03ScrapTableData.java```
-- Run the test classes from the IDE or using the terminal command:
-
-**Verification**
-- For the web forms:
-  - Check the assertion logs for success or failure messages.
-- For the table scraping:
-  - Verify the console output and the generated text file (e.g., store.txt).
-
-**Output Files**
-- Logs: Test results and execution details are logged in the console.
-- Text File: Scraped table data is stored in ```store.txt```.
